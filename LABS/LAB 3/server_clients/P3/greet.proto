@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package greet;
+
+// Definition of the Greeter service
+service Greeter {
+  // RPC method Greet that takes a HelloRequest and returns a HelloResponse
+  rpc Greet (HelloRequest) returns (HelloResponse);
+}
+
+// Definition of the HelloRequest message
+message HelloRequest {
+  // Field for the recipient's name
+  string name = 1;
+  
+  // Field for the message content
+  string message = 2;
+}
+
+// Definition of the HelloResponse message
+message HelloResponse {
+  // Field for the response message
+  string message = 1;
+}
